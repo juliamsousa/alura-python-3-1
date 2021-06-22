@@ -11,3 +11,5 @@ https://docs.python.org/3/library/string.html#formatexamples
 https://pyformat.info/
 
 https://docs.python.org/3/library/
+
+https://docs.python.org/3/library/functions.html
