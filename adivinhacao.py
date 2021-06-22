@@ -4,8 +4,25 @@ print ("=================================")
 print ("Bem vindo ao jogo de adivinhacao!")
 print ("=================================")
 
+# gerando o numero aleatorio
 secret_number = random.randrange(1, 101)
-total_attempts = 10
+total_attempts = 0
+total_points = 1000
+
+print("Selecione um nível de dificuldade")
+print(" 1 - Fácil")
+print(" 2 - Médio")
+print(" 3 - Difícil")
+
+difficulty_level = int(input("Defina a dificuldade:"))
+
+if (difficulty_level == 1):
+    total_attempts = 20
+elif (difficulty_level == 2):
+    total_attempts = 10
+else:
+    total_attempts = 5
+
 round = 1
 inferior_limit = 1
 superior_limit = 100
@@ -36,7 +53,7 @@ for round in range (1, total_attempts+1):
 
     # desse modo temos apenas um chute
     if (guessed):
-        print ("Acertou miseravi!")
+        print (f"Acertou miseravi! Pontos totais: {total_points}")
         break
     else:
         if (bigger_than):
@@ -45,5 +62,8 @@ for round in range (1, total_attempts+1):
         # nesse caso poderia ser resolvido com um if, mas e pra carater didatico
         elif (smaller_than):
             print ("Errooooou! Pode subir")
+
+        lost_points =  abs(secret_number - guess)
+        total_points  = total_points - lost_points
 
 print ("Fim de jogo!")
