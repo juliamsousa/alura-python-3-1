@@ -1,17 +1,19 @@
-# coding=utf-8
-# This is a sample Python script.
+import forca
+import adivinhacao
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+print ("=================================")
+print ("Bem vindo ao nosso fliperama!")
+print ("=================================")
 
+print("Selecione qual jogo deseja jogar")
+print(" 1 - Forca")
+print(" 2 - Adivinhação")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print("Hi, {0}".format(name))  # Press Ctrl+F8 to toggle the breakpoint.
+game = int(input("Digite o jogo desejado:"))
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if(game == 1):
+    print("Iniciando o jogo da Forca")
+    forca.play()
+elif(game == 2):
+    print ("Iniciando o jogo da Adivinhação")
+    adivinhacao.play()
