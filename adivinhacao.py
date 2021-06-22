@@ -1,8 +1,10 @@
+import random
+
 print ("=================================")
 print ("Bem vindo ao jogo de adivinhacao!")
 print ("=================================")
 
-secret_number = 42
+secret_number = random.randrange(1, 101)
 total_attempts = 10
 round = 1
 inferior_limit = 1
